@@ -3,7 +3,7 @@
 
 # 二、效果预览
 
-![Demo](Yolov3-NPU-Acceleration/vedio/yolov3.gif)
+![image](Yolov3-NPU-Acceleration/vedio/yolov3.gif)
 
 # 三、使用方式
 ## 3.1 模型训练
