@@ -3,7 +3,7 @@
 
 # 二、效果预览
 
-[![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+![Demo](vedio/yolov3.gif)
 
 # 三、使用方式
 ## 3.1 模型训练
