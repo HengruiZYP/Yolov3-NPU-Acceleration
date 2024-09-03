@@ -2,13 +2,8 @@
 该模型(yolov3)用于目标检测任务，基于PaddleDetection2.6进行模型训练，paddle版本使用2.4.0，输入数据尺寸可以为320x320/416x416/608x608，数据格式为coco格式。 
 
 # 二、效果预览
-## Watch the Demo
 
 [![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-
-![](res/test.jpg)
-![](res/result.jpg)
-
 
 # 三、使用方式
 ## 3.1 模型训练
