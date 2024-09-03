@@ -5,6 +5,7 @@
 
 ![image](https://github.com/HengruiZYP/Yolov3-NPU-Acceleration/blob/main/vedio/yolov3.gif)
 
+<img src="vedio/yolov3.gif" width="50%">
 # 三、使用方式
 ## 3.1 模型训练
 __模型生产基于aistudio平台进行__，确保已有aistudio账号。
