@@ -116,8 +116,10 @@ sudo apt install onnxruntime
         - with_profile: 是否推理耗时，若设置会输出包含前处理、模型推理和后处理的总耗时，默认不输出
 
 - 查看工程目录，若得到结果如下：vis.jpg
+  
   证明模型已经部署成功
   
+  <img src="yolov3-python/yolo/vis.jpg" width="40%">
   
 ### Step7：
 接入摄像头识别
@@ -127,6 +129,8 @@ sudo apt install onnxruntime
   #查看摄像头是否正常
   ```
   正常情况应该如下：
+  
+  <img src="vedio/image.jpeg" width="40%">
   
 - 摄像头的代码在infer_demo_vedio.py，输入如下指令，即可开启摄像头识别
   ```bash
