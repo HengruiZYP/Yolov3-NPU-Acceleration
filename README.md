@@ -119,7 +119,7 @@ sudo apt install onnxruntime
   
   证明模型已经部署成功
   
-  <img src="yolov3-python/yolo/vis.jpg" width="40%">
+  <img src="yolov3-python/vis.jpg" width="40%">
   
 ### Step7：
 接入摄像头识别
