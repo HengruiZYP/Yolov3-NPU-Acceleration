@@ -19,7 +19,9 @@ aistudio创建项目, 选择paddle2.4.0版本。
 
 ### 3.1.2 模型训练、评估、导出
 项目链接：[aistudio项目链接](https://aistudio.baidu.com/projectdetail/6595113?contributionType=1&sUid=1318783&shared=1&ts=1701078320517)
+
 本库已含训练好的模型，并进行了加速处理。
+
 __请参考如下版本__：![](yolov3-python/res/aistudio_version.jpg)
 
 ## 3.2 模型转换
