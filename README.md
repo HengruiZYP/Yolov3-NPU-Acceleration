@@ -47,7 +47,7 @@ __模型部署基于板卡进行__
   ```bash
   mkdir Downloads
   cd Downloads
-  git clone https://github.com/HengruiZYP/Yolov3-NPU-Acceleration.git
+  wget https://bj.bcebos.com/pp-packages/whl/paddlepaddle-2.4.2-cp38-cp38-linux_aarch64.whl 
   sudo pip install paddlepaddle-2.4.2-cp38-cp38-linux_aarch64.whl -i https://pypi.tuna.tsinghua.edu.cn/simple
   ```
 
@@ -56,9 +56,7 @@ __模型部署基于板卡进行__
 ```bash
 cd /home/edgeboard/
 #下载模型
-wget https://bj.bcebos.com/ppdeploy/ppdeploy1.1/SDK/PPDeploy1.1_yolov3_PaddleDetection2.6_Paddle2.4.1_Ver1.0.0_python.zip
-#解压模型
-unzip PPDeploy1.1_yolov3_PaddleDetection2.6_Paddle2.4.1_Ver1.0.0_python.zip
+git clone https://github.com/HengruiZYP/Yolov3-NPU-Acceleration.git
 ```
 
 ### Step3：
