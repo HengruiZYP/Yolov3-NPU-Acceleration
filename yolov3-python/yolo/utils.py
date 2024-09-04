@@ -103,7 +103,7 @@ def vis(img, results, threshold=0.3):
             "{} {:.2f}".format(labels[label], score),
             (xmin, ymin),
             cv2.FONT_HERSHEY_SIMPLEX,
-            0.6,
+            0.9,
             (0, 0, 255),
             1,
         )

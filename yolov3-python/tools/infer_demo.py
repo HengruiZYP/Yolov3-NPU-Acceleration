@@ -8,6 +8,7 @@ import warnings
 import cv2
 warnings.filterwarnings("ignore")
 
+
 parent_path = os.path.abspath(os.path.join(__file__, *([".."] * 2)))
 sys.path.insert(0, parent_path)
 from yolo import YoloV3, vis
@@ -61,23 +62,18 @@ def main(args):
     test_image = args.test_image
     image = cv2.imread(test_image)
     
-    # with_profile
     with_profile = args.with_profile
     if with_profile:
         results = detector.predict_profile(image)
         print("total time: ", detector.total_time)
     else:
         results = detector.predict_image(image)
-
     # visualize
     visualize = args.visualize
     if visualize:
         render_img = vis(image, results)
         cv2.imwrite("./vis.jpg", render_img)
         print("visualize result saved as vis.jpg.")
-            
-    cap.release()
-    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     parser = argsparser()
