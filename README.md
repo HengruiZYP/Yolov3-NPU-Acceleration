@@ -47,7 +47,7 @@ __模型部署基于板卡进行__
   ```bash
   mkdir Downloads
   cd Downloads
-  wget https://bj.bcebos.com/pp-packages/whl/paddlepaddle-2.4.2-cp38-cp38-linux_aarch64.whl  
+  git clone https://github.com/HengruiZYP/Yolov3-NPU-Acceleration.git
   sudo pip install paddlepaddle-2.4.2-cp38-cp38-linux_aarch64.whl -i https://pypi.tuna.tsinghua.edu.cn/simple
   ```
 
