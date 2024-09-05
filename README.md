@@ -8,6 +8,9 @@
 
 # 三、使用方式
 ## 3.1 模型训练
+
+本库已含训练好的模型，并进行了加速处理。
+
 __模型生产基于aistudio平台进行__，确保已有aistudio账号。
 
 aistudio地址：https://aistudio.baidu.com/aistudio/index
@@ -20,7 +23,7 @@ aistudio创建项目, 选择paddle2.4.0版本。
 ### 3.1.2 模型训练、评估、导出
 项目链接：[aistudio项目链接](https://aistudio.baidu.com/projectdetail/6595113?contributionType=1&sUid=1318783&shared=1&ts=1701078320517)
 
-本库已含训练好的模型，并进行了加速处理。
+
 
 __请参考如下版本__：![](yolov3-python/res/aistudio_version.jpg)
 
@@ -62,7 +65,7 @@ git clone https://github.com/HengruiZYP/Yolov3-NPU-Acceleration.git
 ```
 
 ### Step3：
-安装依赖库，确保当前位于/home/edgeboard/yolov3-python目录下：
+安装依赖库，确保当前位于/home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python目录下：
 ```bash
 sudo pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
@@ -78,7 +81,7 @@ sudo apt install onnxruntime
 - 配置config.json文件（无更改可略过）
   终端输入以下命令，进入config.json所在目录，并使用vim查看内容。
   ```bash
-  cd /home/edgeboard/resnet-python/
+  cd /home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python
   vim config.json
   ```
 - 默认已配置完成，可直接使用，如有自定义，可另行更改配置内容。
@@ -97,7 +100,7 @@ sudo apt install onnxruntime
 
 ### Step6：
 尝试ppnc推理
-- 确保当前位于/home/edgeboard/yolov3-python目录下：
+- 确保当前位于/home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python目录下：
     ```shell
     sudo python3 tools/infer_demo.py \
     --config ./model/config.json \
@@ -134,7 +137,7 @@ sudo apt install onnxruntime
   
 - 摄像头的代码在infer_demo_vedio.py，输入如下指令，即可开启摄像头识别
   ```bash
-  cd /home/edgeboard/yolov3-python/
+  cd /home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python
   sudo python3 tools/infer_demo_vedio.py --visualize
   ```
 
