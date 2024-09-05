@@ -5,6 +5,13 @@
 
 <img src="vedio/yolov3.gif" width="40%">
 
+在经过NPU加速之后，推理时间缩短了40倍左右
+
+如下图所示 运行test.py进行对比
+
+paddle是CPU推理，ppnc是NPU推理
+
+<img src="vedio/diff.png" width="40%">
 
 # 三、使用方式
 ## 3.1 模型训练
