@@ -9,7 +9,7 @@ import pickle
 import paddle
 from paddle import fluid
 import warnings
-
+import time
 warnings.filterwarnings("ignore")
 
 parent_path = os.path.abspath(os.path.join(__file__, *([".."] * 2)))
@@ -146,8 +146,14 @@ def main(args):
         print(test_file)
         test_path = os.path.join(test_dir, test_file)
         test_image = cv2.imread(test_path)
+
+        time0 = time.time()
         ppnc_result = ppnc_detector.predict_image(test_image)
+        time1 = time.time()
         paddle_result = paddle_detector.predict_image(test_image)
+        time2 = time.time()
+        print(f' ppnc  total time: {time1-time0}')
+        print(f'paddle total time: {time2-time1}\n')
 
         # save pickle result
         with open(
