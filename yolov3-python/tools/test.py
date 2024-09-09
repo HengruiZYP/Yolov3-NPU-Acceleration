@@ -146,14 +146,20 @@ def main(args):
         print(test_file)
         test_path = os.path.join(test_dir, test_file)
         test_image = cv2.imread(test_path)
-
-        time0 = time.time()
+        
+        # ppnc detect
+        start_time_ppnc = time.time()
         ppnc_result = ppnc_detector.predict_image(test_image)
-        time1 = time.time()
+        end_time_ppnc = time.time()
+        ppnc_time = end_time_ppnc - start_time_ppnc
+        # paddle detect
+        start_time_paddle = time.time()
         paddle_result = paddle_detector.predict_image(test_image)
-        time2 = time.time()
-        print(f' ppnc  total time: {time1-time0}')
-        print(f'paddle total time: {time2-time1}\n')
+        end_time_paddle = time.time()
+        paddle_time = end_time_paddle - start_time_paddle
+
+        print(f'ppnc   total time: {ppnc_time}')
+        print(f'paddle total time: {paddle_time}\n')
 
         # save pickle result
         with open(
