@@ -147,6 +147,45 @@ sudo apt install onnxruntime
   cd /home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python
   sudo python3 tools/infer_demo_vedio.py --visualize
   ```
+## 3.4 paddle、ppnc对比测试
+- 模型文件  
+    确保aistudio上导出的paddle静态图模型文件(xx.pdmodel)和(xx.pdiparams)已经传输至板卡，置于/home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python/model目录下。
+- 执行测试  
+    确保当前位于/home/Yolov3-NPU-Acceleration/edgeboard/yolov3目录下：
 
+    ```shell
+    sudo python3 tools/test.py \
+    --config  ./model/config.json  \
+    --infer_yml ./model/infer_cfg.yml \
+    --model_dir ./model \
+    --test_dir ./test_images \
+    --output_dir ./output_dir \
+    ```
+
+    各命令行选项参数如下：   
+        - config: 同上  
+        - infer_yml: 同上  
+        - model_dir: paddle静态图模型文件(model.pdmodel)和(model.pdiparams)所在目录  
+        - test_dir: 测试图片文件夹路径  
+        - output_dir: 存放结果文件，默认为"./output_dir"，该路径下会生成paddle_result_pickle、paddle_result_images、ppnc_result_pickle、ppnc_result_images目录，分别存放paddle和ppnc的pickle格式结果和可视化的结果数据。
+
+## 3.5 实际项目部署
+实际用于项目中时，仅需要部分脚本，因此需要提取部署包并置于实际的项目代码中运行。
+
+### 3.5.1 提取部署包
+确保当前位于/home/edgeboard/Yolov3-NPU-Acceleration/yolov3-python,执行以下命令导出用于项目部署的zip包：
+```shell
+sudo ./extract.sh
+```
+执行成功后会在当前目录生成yolov3_deploy.zip压缩包。
+### 3.5.2 使用部署包
+- 准备ppnc模型及配置文件    
+    将模型生产阶段aistudio生成的model.nb、model.config、model.onnx、model.po拷贝到项目能访问的目录， 并参照3.2.1的方式编写模型配置文件config.json。
+
+- 准备环境
+
+    将3.3.1生成的yolov3_deploy.zip部署包解压后得到lib、yolo文件夹和requirements.txt文件。其中requirements.txt是已验证过部署包可正常使用的相关库版本，实际项目开发中安装相关库时可参考该文件。
+- 使用  
+    部署包使用方式请参考[3.2.2-ppnc推理]中使用的infer_demo.py脚本。
 
 
