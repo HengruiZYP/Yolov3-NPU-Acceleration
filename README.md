@@ -3,6 +3,8 @@
 
 # 二、效果预览
 
+<img src="vedio/EdgeBoard_DK-1A.png" width="70%">
+
 <img src="vedio/yolov3.gif" width="40%">
 
 在经过NPU加速之后，推理时间缩短了40倍左右
